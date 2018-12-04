@@ -36,8 +36,6 @@ public class MealAdapter extends ArrayAdapter<Meal> {
 
 
         int quantity = currentMeal.getMealQuantity();
-        //currentMeal.setMealQuantity(quantity);
-        //quantityTypeTextView.setText(String.valueOf(currentMeal.getMealQuantity()));
        int total = (currentMeal.getMealPrice()) * quantity;
         priceTypeTextView.setText((total) + " грн" );
 
