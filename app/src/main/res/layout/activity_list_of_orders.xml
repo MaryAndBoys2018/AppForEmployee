@@ -5,7 +5,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:background="@drawable/gradient_backgroud">
+    android:background="@drawable/gradient_backgroud">
 
     <TextView
 
@@ -19,12 +19,13 @@
         <LinearLayout
 
             android:id="@+id/one"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:orientation="vertical"
             android:layout_alignParentTop="true"
-            android:layout_centerInParent="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:layout_marginBottom="32dp">
 
             <TextView
@@ -56,54 +57,61 @@
                 android:orientation="vertical"
                 tools:context=".MenuActivity" />
 
-<LinearLayout
+<RelativeLayout
 
     android:layout_width="match_parent"
     android:layout_height="60dp"
-    android:orientation="horizontal"
     android:layout_marginBottom="10dp">
 
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:text="Час отримання:"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
     <TextView
 
+        android:id="@+id/time_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:padding="5dp"
+        android:text="Час отримання:"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+    <TextView
+
+        android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:padding="5dp"
-        tools:text="Час" />
+        tools:text="Час"
+        android:layout_toRightOf="@id/time_text_view"/>
 
     <TextView
 
+        android:id="@+id/total_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="2dp"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        android:text="Сума:" />
+        android:text="Сума:"
+        android:layout_toRightOf="@id/time" />
 
      <TextView
 
+         android:id="@+id/total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
          android:padding="5dp"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        tools:text="Сума" />
+        android:textSize="18sp"
+        tools:text="Сума"
+         android:layout_toRightOf="@id/total_text_view"/>
 
-</LinearLayout>
+</RelativeLayout>
 
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
 
         android:id="@+id/accept_or_cancel"
         android:layout_width="wrap_content"
@@ -118,6 +126,7 @@
         <Button
 
             android:id="@+id/accept"
+            android:layout_weight="1"
             android:layout_width="120dp"
             android:layout_height="40dp"
             android:background="@drawable/field"
@@ -128,14 +137,16 @@
         <Button
 
             android:id="@+id/cancel"
+            android:layout_weight="1"
+            android:layout_alignParentRight="true"
             android:layout_width="120dp"
             android:layout_height="40dp"
-            android:layout_marginLeft="80dp"
+            android:layout_marginRight="30dp"
             android:background="@drawable/field"
             android:padding="4dp"
             android:text="Відхилити"
             android:textColor="#FFFFFF" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </RelativeLayout>
