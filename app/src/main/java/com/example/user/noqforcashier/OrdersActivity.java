@@ -14,8 +14,6 @@ public class OrdersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_of_orders);
 
-        Intent intent = getIntent();
-        Bundle extras = intent.getExtras();
 
 
         ArrayList<Meal> meals = new ArrayList<>();
