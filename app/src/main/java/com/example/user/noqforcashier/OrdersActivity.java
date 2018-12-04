@@ -17,7 +17,7 @@ public class OrdersActivity extends AppCompatActivity {
 
 
         ArrayList<Meal> meals = new ArrayList<>();
-        meals.add(new Meal("Гамбургер", "40грн"));
+        meals.add(new Meal("Гамбургер", "40грн", "3шт"));
         MealAdapter adapter = new MealAdapter( this, meals);
         ListView listView = (ListView) findViewById(R.id.orders_list);
         listView.setAdapter(adapter);

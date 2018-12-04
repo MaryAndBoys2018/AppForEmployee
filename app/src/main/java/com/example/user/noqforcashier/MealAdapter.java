@@ -28,6 +28,9 @@ public class MealAdapter extends ArrayAdapter<Meal> {
 
         TextView priceTypeTextView = (TextView) listItemView.findViewById(R.id.price_type_text_view);
         priceTypeTextView.setText(currentMeal.getMealPrice());
+
+        TextView quantityTypeTextView = (TextView) listItemView.findViewById(R.id.quantity_of_meals);
+        quantityTypeTextView.setText(currentMeal.getMealQuantity());
         return listItemView;
     }
 }
