@@ -16,10 +16,7 @@ public class OrdersActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
-        int numberOfCheckedItems = extras.getInt("number of checked meals");
 
-        final String nameOfCafeForBackButton = extras.getString("cafe name for intent");
-        final int positionForBackButton = extras.getInt("position for intent");
 
         ArrayList<Meal> meals = new ArrayList<>();
         meals.add(new Meal("Гамбургер", "40грн"));
