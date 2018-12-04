@@ -18,7 +18,7 @@ public class MealAdapter extends ArrayAdapter<Meal> {
         View listItemView = convertView;
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.activity_orders_list_item, parent, false);
+                    R.layout.activity_order_item, parent, false);
         }
         final Meal currentMeal = getItem(position);
 

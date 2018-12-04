@@ -12,7 +12,7 @@ public class OrdersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_orders);
+        setContentView(R.layout.activity_list_of_orders);
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
