@@ -33,6 +33,7 @@ public class OrdersActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 order=dataSnapshot.getValue(Order.class);
+                Toast.makeText(OrdersActivity.this,"lal",Toast.LENGTH_LONG);
                 MealAdapter adapter = new MealAdapter( OrdersActivity.this, order.getListOfMeals());
                 ListView listView = (ListView) findViewById(R.id.orders_list);
                 listView.setAdapter(adapter);
