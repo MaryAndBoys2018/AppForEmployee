@@ -19,6 +19,5 @@ public class Meal {
     public int getMealQuantity(){
         return mMealQuantity;
     }
-    public void setMealQuantity(int quantity) { mMealQuantity = quantity; }
 }
 

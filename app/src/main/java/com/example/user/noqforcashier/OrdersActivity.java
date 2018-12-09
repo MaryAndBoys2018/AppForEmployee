@@ -16,6 +16,7 @@ public class OrdersActivity extends AppCompatActivity {
 
 
 
+
         ArrayList<Meal> meals = new ArrayList<>();
         meals.add(new Meal("Гамбургер", 40, 5));
         MealAdapter adapter = new MealAdapter( this, meals);
