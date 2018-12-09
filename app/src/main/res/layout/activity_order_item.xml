@@ -7,7 +7,8 @@
     android:paddingTop="6dp"
     tools:background="@drawable/gradient_backgroud"
     >
-    <LinearLayout
+    <RelativeLayout
+
         android:id="@+id/one"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,34 +20,38 @@
         android:paddingRight="26dp">
 
         <TextView
+
             android:id="@+id/meal_name_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/quantity_of_meals"
             android:paddingBottom="4dp"
             android:textSize="20sp"
             tools:text="Meal's Name"
-            android:layout_weight="4"
             android:textColor="#FFFFFF"/>
 
         <TextView
 
+            android:id="@+id/quantity_of_meals"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/price_type_text_view"
             android:padding="4dp"
             tools:text="Кількість"
             android:textSize="16sp"
-            android:textColor="#FFFFFF"
-            android:id="@+id/quantity_of_meals"/>
+            android:textColor="#FFFFFF" />
 
         <TextView
             android:id="@+id/price_type_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
             android:padding="6dp"
             tools:text="$$$"
             android:textColor="#FFFFFF" />
 
-        </LinearLayout>
+        </RelativeLayout>
 
     <TextView
 
