@@ -28,15 +28,14 @@ public class MealAdapter extends ArrayAdapter<Meal> {
 
 
         TextView quantityTypeTextView = (TextView) listItemView.findViewById(R.id.quantity_of_meals);
-        quantityTypeTextView.setText("Кількість: "+ Integer.toString(currentMeal.getMealQuantity())+ " шт");
+        quantityTypeTextView.setText("Кількість: "+ Integer.toString(currentMeal.getQuantity())+ " шт");
 
 
         TextView priceTypeTextView = (TextView) listItemView.findViewById(R.id.price_type_text_view);
         priceTypeTextView.setText(currentMeal.getMealPrice()+ " грн");
 
 
-        int quantity = currentMeal.getMealQuantity();
-       int total = (currentMeal.getMealPrice() * quantity);
+       int total = (Integer.parseInt(currentMeal.getMealPrice()) * currentMeal.getQuantity());
         priceTypeTextView.setText((total) + " грн" );
 
         return listItemView;

@@ -26,9 +26,9 @@ public class OrdersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_of_orders);
 
-
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference myRef = database.getReference("order");
+
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -43,30 +43,11 @@ public class OrdersActivity extends AppCompatActivity {
 
                 TextView sumTextView= (TextView) findViewById(R.id.total);
                 sumTextView.setText(Integer.toString(order.getmSum()));
-
-
-
-
             }
-
             @Override
             public void onCancelled(DatabaseError error) {
                 Toast.makeText(OrdersActivity.this,error.getMessage(),Toast.LENGTH_LONG);
             }
         });
-
-
-
-
-
-        /*ArrayList<Meal> meals = new ArrayList<>();
-        meals.add(new Meal("Гамбургер", 40, 5));*/
-
-
-
-
-
-
-
     }
 }
