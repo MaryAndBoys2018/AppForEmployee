@@ -25,16 +25,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@id/quantity_of_meals"
+            android:layout_toLeftOf="@id/quantity_and_cost"
             android:paddingBottom="4dp"
             android:textSize="20sp"
             tools:text="Meal's Name"
             android:textColor="#FFFFFF"/>
 
+        <RelativeLayout
+
+            android:id="@+id/quantity_and_cost"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
         <TextView
 
             android:id="@+id/quantity_of_meals"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_toLeftOf="@id/price_type_text_view"
             android:padding="4dp"
@@ -43,6 +50,7 @@
             android:textColor="#FFFFFF" />
 
         <TextView
+
             android:id="@+id/price_type_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -52,6 +60,8 @@
             android:textColor="#FFFFFF" />
 
         </RelativeLayout>
+
+    </RelativeLayout>
 
     <TextView
 
